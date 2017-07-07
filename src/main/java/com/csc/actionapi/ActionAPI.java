@@ -28,8 +28,7 @@ public class ActionAPI {
 		}
 		return by;
 	}
-	
-	 
+
 	public static void toNavigate(String url) {
 	
 		driver.navigate().to(url);
