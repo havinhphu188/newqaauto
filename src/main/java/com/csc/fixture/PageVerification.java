@@ -2,8 +2,8 @@ package com.csc.fixture;
 
 import java.util.List;
 
-import com.csc.PageVerifications.Verification;
 import com.csc.api.ActionAPI;
+import com.csc.pageverifications.Verification;
 
 import static java.util.Arrays.asList;
 
