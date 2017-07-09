@@ -1,10 +1,13 @@
 package com.csc.actionapi;
 
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.csc.driverpool.DriverPool;
 import com.csc.driverpool.TestConstant;
+import com.csc.storage.Logging;
 
 public class ActionAPI {
 	private static WebDriver driver;
@@ -62,6 +65,17 @@ public class ActionAPI {
 	 */
 	public static void toCloseBrowser() {
 		driver.close();
+	}
+	public static void toSwitchWindow(String title) {
+		Set<String> windows = driver.getWindowHandles();
+		String mainwindow=driver.getWindowHandle();
+		for (String s:windows){
+			driver.switchTo().window(s);
+			if (driver.getTitle().contains(title)){
+				return;
+			}
+		}
+		driver.switchTo().window(mainwindow);
 	}
 
 	

@@ -86,5 +86,11 @@ public class PageAction {
 		ArrayList<String> list = readLocator(locator);		
 		ActionAPI.toSetInput(list.get(0), list.get(1), value);
 	}
+
+	public static void switchToWindow(String title) {
+		// TODO Auto-generated method stub
+		ActionAPI.toSwitchWindow(title);
+		
+	}
 	
 }

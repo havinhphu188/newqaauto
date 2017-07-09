@@ -3,6 +3,7 @@ package com.csc.fixture;
 import org.apache.log4j.Logger;
 
 import com.csc.action.PageAction;
+import com.csc.storage.Logging;
 
 
 
@@ -45,6 +46,11 @@ public class InteractWebApplication {
 	
 	public void iSwitchToBrowser(String key){
 		PageAction.switchToBrowser(key);
+	}
+
+	public void iSwitchToWindowWithTitleContain(String title){
+		Logging.info("i switch window");
+		PageAction.switchToWindow(title);
 	}
 	
 	
