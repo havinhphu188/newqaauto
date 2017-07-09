@@ -12,6 +12,14 @@ public class ActionAPI {
 	public static void setDriverForAction(String key){
 		driver = DriverPool.getDriver(key);
 	}
+	public static void toPause(String waitTime) {
+		try {
+			int time = Integer.valueOf(waitTime);
+			Thread.sleep((time));
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+	}
 
 	private static By toDefineElement(String type, String value) {
 		By by = null;

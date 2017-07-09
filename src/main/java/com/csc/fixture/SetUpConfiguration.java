@@ -11,7 +11,6 @@ public class SetUpConfiguration {
 	public static Configuration configuration = new Configuration();
 
 	public SetUpConfiguration() {
-		log.info("SetUpConfiguration()");
 	}
 
 	public void setFileConfig(String fileName) {

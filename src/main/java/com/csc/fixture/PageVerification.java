@@ -1,11 +1,10 @@
 package com.csc.fixture;
 
+import static java.util.Arrays.asList;
+
 import java.util.List;
 
-import com.csc.api.ActionAPI;
 import com.csc.pageverifications.Verification;
-
-import static java.util.Arrays.asList;
 
 public class PageVerification {
 	private String locator;

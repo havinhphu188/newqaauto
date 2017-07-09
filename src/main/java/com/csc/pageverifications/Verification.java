@@ -1,23 +1,19 @@
 package com.csc.pageverifications;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
 
 import com.csc.action.PageAction;
 import com.csc.driverpool.DriverPool;
 
 public class Verification {
+	//TODO: Be careful. Driver may not be update
 	static WebDriver driver = DriverPool.getCurrentDriver();
 
 	public static String verifyElementText(String locator) {
-		PageAction action = new PageAction();
-		List<String> loca = action.readLocator(locator);
+		List<String> loca = PageAction.readLocator(locator);
 		String type = loca.get(0);
 		String elementText = "";
 		try{
